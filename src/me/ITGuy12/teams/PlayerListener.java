@@ -1,5 +1,6 @@
 package me.ITGuy12.teams;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -16,6 +17,7 @@ public class PlayerListener implements Listener{
 			if(TeamManager.getTeamManager().isInATeam(damaged) && TeamManager.getTeamManager().isInATeam(damager)) {
 				if(TeamManager.getTeamManager().getTeamForMember(damaged) == TeamManager.getTeamManager().getTeamForMember(damager)) {
 					e.setCancelled(true);
+					damager.sendMessage(Main.prefix + ChatColor.RED + "ERROR: You cannot attack teammates!");
 				}
 			}
 		}
