@@ -1,6 +1,6 @@
 name: Teams
 version: 1.1.0
-main: me.ITGuy12.teams
+main: me.ITGuy12.teams.Main
 description: Adds PVP teams to the game. The team members have friendly fire disabled.
 author: ITGuy12
 commands:
