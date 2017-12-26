@@ -23,6 +23,7 @@ public class TeamManager {
 		Team t = new Team(leader);
 		teams.add(t);
 		return t;
+		
 	}
 	
 	public void removeTeam(Team t) {

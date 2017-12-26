@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
+	public static Main plugin;
 	int maxPerTeam;
 	public static String prefix;
   //HashMap Invited Inviter
@@ -19,7 +20,8 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		Bukkit.getLogger().info(ChatColor.YELLOW + "Teams by ITGuy12 enabled. Dedicated to: beanii on the Bukkit Forums");
 		Bukkit.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
-		getConfig().options().copyDefaults(true);
+		this.saveDefaultConfig();
+		this.getConfig().options().copyDefaults(true);
 		maxPerTeam = getConfig().getInt("teams.max-per-team");
 		prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("teams.prefix"));
 	}

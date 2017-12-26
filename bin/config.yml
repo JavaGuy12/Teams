@@ -1,3 +1,6 @@
 teams:
+  #The max number of players per team. (Positive Integer)
   max-per-team: 3
+  #The prefix in all chat messages (String with color codes using '&')
   prefix: "&7[&6T&bE&cA&2M&eS&7] "
+    
